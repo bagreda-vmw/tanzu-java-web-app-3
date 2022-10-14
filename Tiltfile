@@ -1,7 +1,7 @@
 SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='709231817767.dkr.ecr.ap-southeast-1.amazonaws.com/22039580-4176-11ed-9e20-0202f20c5b5a/tap-supply-chain/tanzu-java-web-app-3-tap-workload')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
 NAMESPACE = os.getenv("NAMESPACE", default='tap-workload')
-
+allow_k8s_contexts('aks-tap13')
 k8s_custom_deploy(
     'tanzu-java-web-app-3',
     apply_cmd="tanzu apps workload apply -f config/workload.yaml --live-update" +
