@@ -14,5 +14,5 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: default-team
+  owner: team-se-anz
   dependsOn: [Component:tanzu-java-web-app]
