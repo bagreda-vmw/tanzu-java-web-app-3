@@ -1,7 +1,7 @@
-SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='bagreda.azurecr.io/tap-supplychain/tanzu-java-web-app-3-tap-workload')
+SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='harbor.bartlab.xyz/tap/tap/tanzu-java-web-app-3-my-apps')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
 NAMESPACE = os.getenv("NAMESPACE", default='tap-workload')
-allow_k8s_contexts('aks-tap13')
+allow_k8s_contexts('tap14-aks-admin')
 k8s_custom_deploy(
     'tanzu-java-web-app-3',
     apply_cmd="tanzu apps workload apply -f config/workload.yaml --live-update" +
